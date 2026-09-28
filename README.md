@@ -87,3 +87,12 @@ medxpert-standards-connector/
 ## 版权
 
 MIT © 2026 注册老炮 (Reg Lao Pao)。标准正文版权归各标准组织所有，本连接器仅索引公开信息。
+
+## 权利与归属（Rights & Attribution）
+
+MIT License © 注册老炮@MedXpert（代码）。标准正文版权归各标准组织所有；本连接器仅索引公开信息，不复制标准正文。
+
+© 2026 赵兴华 / Steven Zhao·China (ORCID 0009-0001-0512-1237). All rights reserved.
+名称状态 (name status)  : "SynomosAI" / "MedXpert" — 未申请实体注册、未申请商标注册
+                        (not a registered legal entity; no trademark registered)
+`mcp-name: io.github.zhaoxinghua09-cell/medxpert-standards-connector`
