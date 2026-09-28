@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "medxpert-standards-connector": {
+      "command": "python",
+      "args": ["standards_mcp_server.py"],
+      "env": {
+        "STD_REFS": "references"
+      },
+      "disabled": false
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "schema": "workbuddy-connector/1.0",
+  "name": "medxpert-standards-connector",
+  "displayName": "MedXpert 标准检索连接器",
+  "version": "1.0.0",
+  "description": "本地只读检索医疗器械 / 骨科常用标准索引库（ISO / YY-T / GB-T / ASTM / IEC / EN / 21 CFR / MDCG 等），返回标准号、中英文名、适用区域、归口方、主题领域、官方链接与关联法规。零网络、零凭据、纯本地。",
+  "description_en": "Local read-only MCP connector that retrieves a medical-device / orthopedic standards index (ISO / YY-T / GB-T / ASTM / IEC / EN / 21 CFR / MDCG, etc.): standard number, name, region, issuing body, topic, official link and related regulation. No network, no credentials.",
+  "examples_zh": [
+    "骨科植入物常用的材料标准有哪些？ASTM F138 和 GB 4234 分别是什么？",
+    "生物相容性评价要依据哪些标准？ISO 10993 和 GB/T 16886 怎么对应？",
+    "无菌医疗器械的洁净室和包装分别用什么标准（ISO 14644 / ISO 11607）？"
+  ],
+  "examples_en": [
+    "What material standards apply to orthopedic implants? What are ASTM F138 and GB 4234?",
+    "Which standards govern biocompatibility evaluation? How do ISO 10993 and GB/T 16886 map?",
+    "Which standards cover cleanroom and packaging for sterile devices (ISO 14644 / ISO 11607)?"
+  ],
+  "category": "knowledge / 医疗器械标准",
+  "type": "mcp",
+  "author": "注册老炮 (Reg Lao Pao)",
+  "maintainer": "潘布达（内容发布运营团）",
+  "license": "MIT",
+  "homepage": "https://medxpert.cn",
+  "repository": "",
+  "tools": [
+    {
+      "name": "list_standards",
+      "description": "列出标准索引库全部主题文件及覆盖的标准族",
+      "permissions": {
+        "readOnly": true,
+        "network": false,
+        "dataEgress": false
+      }
+    },
+    {
+      "name": "search_standards",
+      "description": "关键词检索标准（支持中文/英文/标准号），返回片段+官方链接+关联法规+相关度得分",
+      "permissions": {
+        "readOnly": true,
+        "network": false,
+        "dataEgress": false
+      }
+    },
+    {
+      "name": "get_standard",
+      "description": "按 std_key 取某一标准主题文件的完整整理内容（含官方链接）",
+      "permissions": {
+        "readOnly": true,
+        "network": false,
+        "dataEgress": false
+      }
+    },
+    {
+      "name": "standards_by_region",
+      "description": "按适用区域（中国/国际/美国/欧盟/日本/ISO/ASTM/IEC）筛选标准",
+      "permissions": {
+        "readOnly": true,
+        "network": false,
+        "dataEgress": false
+      }
+    }
+  ],
+  "security": {
+    "network": "none",
+    "credentials": "none",
+    "readOnly": true,
+    "dataEgress": false,
+    "notes": "仅加载包内 references/ 的 Markdown 标准索引；可选环境变量 STD_REFS 用于覆盖知识库目录。不复制受版权保护的标准正文，仅索引官方公开信息与链接。"
+  },
+  "runtime": {
+    "command": "python",
+    "args": [
+      "standards_mcp_server.py"
+    ],
+    "env": {
+      "STD_REFS": "（可选）自定义知识库目录，默认使用包内 references/"
+    },
+    "python": ">=3.10",
+    "dependencies": [
+      "fastmcp>=3.4.7"
+    ]
+  },
+  "setup": "pip install -r requirements.txt，再将本目录配置进 WorkBuddy mcp.json 的 mcpServers（见 README）。",
+  "examples": {
+    "examples_zh": [
+      "骨科植入物常用的材料标准有哪些？ASTM F138 和 GB 4234 分别是什么？",
+      "生物相容性评价要依据哪些标准？ISO 10993 和 GB/T 16886 怎么对应？",
+      "无菌医疗器械的洁净室和包装分别用什么标准（ISO 14644 / ISO 11607）？"
+    ],
+    "examples_en": [
+      "What material standards apply to orthopedic implants? What are ASTM F138 and GB 4234?",
+      "Which standards govern biocompatibility evaluation? How do ISO 10993 and GB/T 16886 map?",
+      "Which standards cover cleanroom and packaging for sterile devices (ISO 14644 / ISO 11607)?"
+    ]
+  },
+  "publishedVia": "WorkBuddy 开放平台",
+  "source": "medxpert-standards-connector",
+  "name_en": "MedXpert Standards Index",
+  "description_zh": "本地只读检索医疗器械 / 骨科常用标准索引库（ISO / YY-T / GB-T / ASTM / IEC / EN / 21 CFR / MDCG 等），返回标准号、中英文名、适用区域、归口方、主题领域、官方链接与关联法规。零网络、零凭据、纯本地。",
+  "standardAlignment": {
+    "standard": "GB/Z 185—2026 人工智能 智能体互联",
+    "parts": [
+      "185.7 智能体工具调用（工具描述）",
+      "185.2 身份码（部分）"
+    ],
+    "note": "工具描述对齐 GB/Z 185.7；不构成国家标准符合性声称。GB/Z 为国家标准化指导性技术文件。"
+  }
+}
