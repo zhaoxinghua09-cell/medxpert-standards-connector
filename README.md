@@ -68,7 +68,7 @@ medxpert-standards-connector/
 ├── connector-meta.json        # 开放平台元数据
 ├── mcp.json                   # MCP 启动配置
 ├── icon.svg                   # 头像
-├── LICENSE                    # MIT
+├── LICENSE                  # Apache-2.0
 ├── requirements.txt           # 依赖：fastmcp
 ├── README.md
 └── references/                # 标准索引知识库（随包分发）
@@ -84,15 +84,13 @@ medxpert-standards-connector/
     └── 电气安全与性能标准枢纽.md
 ```
 
-## 版权
+## 许可说明 · License Notice
 
-MIT © 2026 注册老炮 (Reg Lao Pao)。标准正文版权归各标准组织所有，本连接器仅索引公开信息。
+- **代码许可**：本仓库源代码以 **Apache-2.0** 许可发布（见根目录 [LICENSE](LICENSE)），版权归「赵兴华 / Steven Zhao·China（ORCID 0009-0001-0512-1237）」。
+- **知识库 / 方法论**：随仓库分发的知识库、references/、合成法规知识、检索方法论、分类体系与编排结构 **保留所有权利（All Rights Reserved）**；可在注明出处的前提下引用与学术、公共讨论，但未经书面许可不得复制、改编、再分发、转售或用于模型训练。
+- **品牌状态限定**：MedXpert、SynomosAI、LGD 等为相关项目标识，**均未申请实体注册、未申请商标注册**；出现仅作来源标识，不构成对法人实体或商标权的任何主张。
+- **免责**：本仓库内容不构成法规意见、法律意见或注册代理服务；关键数据以监管机构最新发布为准。
+- **联系**：zhaoxinghua09@gmail.com ｜ ORCID 0009-0001-0512-1237
 
-## 权利与归属（Rights & Attribution）
-
-MIT License © 注册老炮@MedXpert（代码）。标准正文版权归各标准组织所有；本连接器仅索引公开信息，不复制标准正文。
-
-© 2026 赵兴华 / Steven Zhao·China (ORCID 0009-0001-0512-1237). All rights reserved.
-名称状态 (name status)  : "SynomosAI" / "MedXpert" — 未申请实体注册、未申请商标注册
-                        (not a registered legal entity; no trademark registered)
+标准正文版权归各标准组织所有；本连接器仅索引公开信息与官方链接，不复制标准正文。
 `mcp-name: io.github.zhaoxinghua09-cell/medxpert-standards-connector`
