@@ -17,11 +17,11 @@
   ],
   "category": "knowledge / 医疗器械标准",
   "type": "mcp",
-  "author": "注册老炮 (Reg Lao Pao)",
-  "maintainer": "潘布达（内容发布运营团）",
-  "license": "MIT",
+  "author": "赵兴华 / Steven Zhao·China（ORCID 0009-0001-0512-1237）",
+  "maintainer": "赵兴华 / Steven Zhao·China（ORCID 0009-0001-0512-1237）",
+  "license": "Apache-2.0",
   "homepage": "https://medxpert.cn",
-  "repository": "",
+  "repository": "https://github.com/zhaoxinghua09-cell/medxpert-standards-connector",
   "tools": [
     {
       "name": "list_standards",
