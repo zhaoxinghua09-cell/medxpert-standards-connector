@@ -1,0 +1,56 @@
+{
+  "schema": "ubic/agent-card/v1",
+  "name": "MedXpert 标准检索连接器",
+  "description": "Medical-device standards retrieval connector. Read-only MCP runtime indexing ISO/IEC/GB/YY/ASTM standards (quality system, risk, biocompatibility, software, sterilization, labeling/UDI, implant materials, electrical safety) with official links. 4 tools, zero credentials, zero network egress.",
+  "protocol": "MCP",
+  "provider": {
+    "organization": "MedXpert",
+    "url": "https://medxpert.cn"
+  },
+  "author": "赵兴华 / Steven Zhao·China（ORCID 0009-0001-0512-1237）",
+  "capabilities": [
+    "standards index query",
+    "NMPA/FDA/EU/MDR standard lookup",
+    "biocompatibility & risk standards",
+    "labeling/UDI standards",
+    "multi-region standard comparison"
+  ],
+  "keywords": [
+    "medical device standards",
+    "ISO 13485",
+    "ISO 14971",
+    "ISO 10993",
+    "IEC 62304",
+    "IEC 60601",
+    "GB/T 16886",
+    "YY/T 1752",
+    "UDI",
+    "MDR",
+    "standard retrieval",
+    "医疗器械标准",
+    "风险管理",
+    "生物相容性",
+    "标签合规",
+    "质量体系",
+    "sterilization ISO 11135",
+    "implant materials ASTM",
+    "electric safety",
+    "标准索引",
+    "法规标准"
+  ],
+  "auth": {
+    "mode": "none",
+    "note": "read-only, no credentials required"
+  },
+  "transport": {
+    "type": "stdio",
+    "command": "python",
+    "args": [
+      "standards_mcp_server.py"
+    ]
+  },
+  "homepage": "https://medxpert.cn",
+  "license": "Apache-2.0",
+  "installByConsent": "AI may request install; human approves (A3 Law II)",
+  "scope": "standards indexing & retrieval — not the standards text itself"
+}
