@@ -1,5 +1,7 @@
 # MedXpert Standards Connector
 
+<!-- mcp-name: io.github.zhaoxinghua09-cell/medxpert-standards-connector -->
+
 ## License Notice
 
 - **Code**: The source code of this repository is released under **Apache-2.0** (see [LICENSE](LICENSE)), copyright by 赵兴华 / Steven Zhao·China (ORCID 0009-0001-0512-1237).
