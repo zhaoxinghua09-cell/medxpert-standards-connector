@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "medxpert-standards-connector"
+description = "Read-only MCP index of medical-device standards (ISO/YY-T/GB-T/ASTM/IEC/21 CFR/MDCG) with official links."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "Zhao Xinghua (Steven Zhao)", email = "zhaoxinghua09@gmail.com" }]
+keywords = ["mcp", "model-context-protocol", "medical-device", "standards", "iso-13485", "iec-60601", "regulatory"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Healthcare Industry",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Scientific/Engineering :: Medical Science Apps.",
+  "Operating System :: OS Independent",
+]
+dependencies = ["fastmcp>=3.4.7"]
+dynamic = ["version"]
+
+[project.scripts]
+# 三个别名指向同一个 stdio server；与包同名的那条让 `uvx medxpert-standards-connector`
+# 直接起服务（Registry 客户端按包名解析 console script）。
+medxpert-standards-connector = "medxpert_standards.server:main"
+medxpert-standards = "medxpert_standards.server:main"
+medxpert-standards-mcp = "medxpert_standards.server:main"
+
+[project.urls]
+Homepage = "https://medxpert.cn"
+Repository = "https://github.com/zhaoxinghua09-cell/medxpert-standards-connector"
+Issues = "https://github.com/zhaoxinghua09-cell/medxpert-standards-connector/issues"
+
+[tool.setuptools.dynamic]
+version = { attr = "medxpert_standards.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["medxpert_standards*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+medxpert_standards = ["references/*.md"]

@@ -1,3 +1,22 @@
+# MedXpert Standards Connector
+
+<!-- mcp-name: io.github.zhaoxinghua09-cell/medxpert-standards-connector -->
+
+Read-only MCP server over a structured index of medical-device and orthopaedic standards (ISO / YY-T / GB-T / ASTM / IEC / EN / 21 CFR / MDCG). It returns standard numbers, titles, applicable regions, owning bodies, topic areas, official links and related regulations — it never reproduces copyrighted standard text.
+
+- Local, read-only, no network egress, no credentials
+- Four tools: `list_standards` / `search_standards` / `get_standard` / `standards_by_region`
+- Retrieval is a Chinese-friendly BM25 approximation; the only third-party dependency is `fastmcp`
+- The index ships inside the package (`references/`), so it works out of the box
+
+```bash
+pip install medxpert-standards-connector     # or: uvx medxpert-standards-connector
+```
+
+Coverage includes: quality management systems (ISO 13485, 21 CFR 820/QMSR), risk management (ISO 14971), biocompatibility (ISO 10993 series), software and cybersecurity (IEC 62304, MDCG 2019-16), sterilisation (ISO 11135/11137/11607), cleanrooms (ISO 14644), labelling and UDI (ISO 15223-1, MDCG 2019-15), implant materials (ASTM F138/F139, ISO 5832), electrical safety (IEC 60601) and design development.
+
+---
+
 # MedXpert 标准检索连接器
 
 本地只读的医疗器械 / 骨科标准检索 MCP 连接器。把一份结构化「标准索引知识库」封装成 MCP Server，

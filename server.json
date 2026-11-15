@@ -3,11 +3,48 @@
   "name": "io.github.zhaoxinghua09-cell/medxpert-standards-connector",
   "title": "MedXpert 标准检索连接器",
   "description": "Read-only local MCP index of medical-device standards (ISO/GB/YY/ASTM/IEC) with official links.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "websiteUrl": "https://medxpert.cn",
   "repository": {
     "url": "https://github.com/zhaoxinghua09-cell/medxpert-standards-connector",
     "source": "github",
     "id": "1392041207"
+  },
+  "icons": [
+    {
+      "src": "https://cdn.jsdelivr.net/gh/zhaoxinghua09-cell/medxpert-standards-connector@main/icon.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": ["any"],
+      "theme": "light"
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "medxpert-standards-connector",
+      "version": "1.0.1",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "STD_REFS",
+          "description": "Optional directory of your own .md standard index files; defaults to the index bundled in the package.",
+          "isRequired": false
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "publisher": "MedXpert.org / Zhao Xinghua (Steven Zhao)",
+      "license": "Apache-2.0 (code); content index All Rights Reserved",
+      "runtime_egress": "none",
+      "tool_count": 4,
+      "tools": "list_standards, search_standards, get_standard, standards_by_region",
+      "verify_command": "uvx medxpert-standards-connector",
+      "scope_note": "Returns standard metadata and official links only; it never reproduces copyrighted standard text and is not regulatory advice."
+    }
   }
 }
