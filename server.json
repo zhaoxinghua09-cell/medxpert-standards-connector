@@ -3,7 +3,7 @@
   "name": "io.github.zhaoxinghua09-cell/medxpert-standards-connector",
   "title": "MedXpert 标准检索连接器",
   "description": "Read-only local MCP index of medical-device standards (ISO/GB/YY/ASTM/IEC) with official links.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "websiteUrl": "https://medxpert.cn",
   "repository": {
     "url": "https://github.com/zhaoxinghua09-cell/medxpert-standards-connector",
@@ -12,7 +12,7 @@
   },
   "icons": [
     {
-      "src": "https://cdn.jsdelivr.net/gh/zhaoxinghua09-cell/medxpert-standards-connector@main/icon.svg",
+      "src": "https://cdn.jsdelivr.net/gh/zhaoxinghua09-cell/medxpert-standards-connector@v1.0.2/icon.svg",
       "mimeType": "image/svg+xml",
       "sizes": ["any"],
       "theme": "light"
@@ -22,7 +22,7 @@
     {
       "registryType": "pypi",
       "identifier": "medxpert-standards-connector",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "runtimeHint": "uvx",
       "transport": {
         "type": "stdio"
